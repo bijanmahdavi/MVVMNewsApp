@@ -1,0 +1,33 @@
+<layout>
+
+    <data>
+        <variable
+            name="userInfo"
+            type="com.example.mvvmnewsapp.model.NewsViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent" android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:textSize="20sp" />
+        <Button
+            android:onClick="@{userInfo::getArticles}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Get Articles" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

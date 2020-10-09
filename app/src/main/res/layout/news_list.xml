@@ -1,0 +1,53 @@
+<layout>
+
+    <data>
+        <variable
+            name="userInfo"
+            type="com.example.mvvmnewsapp.model.NewsViewModel" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/image_view_news_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"/>
+<LinearLayout
+    android:id="@+id/address_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@={userInfo.title}"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_view_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@={userInfo.description}"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_view_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@={userInfo.imgUrl}"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+</LinearLayout>
+</LinearLayout>
+</layout>
